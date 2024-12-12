@@ -1,0 +1,10 @@
+
+w
+java:S1066|"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8ô§‰×»2J$e24838a5-a864-41d5-9fbb-fce98b31ef1a
+}
+java:S1141="5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8õ§‰×»2J$d7694408-9b78-4e6a-a91c-57e7b0929409
+‚
+java:S46845"@Replace this persistent entity with a simple POJO or DTO object.(¸úµ8ˆ¨‰×»2J$4d1a08c3-c35e-4a36-8ab6-8220ecadd017
+ƒ	java:S125>"<This block of commented-out lines of code should be removed.(©¥–¼ÿÿÿÿÿ8Š¨‰×»2J$2de8d396-a8ca-4bb3-822c-1e9489a008f4
+~	java:S125W"<This block of commented-out lines of code should be removed.(Ú—¨ô8‹¨‰×»2J$45e03bee-42fd-47ad-8939-820430f58146
+r	java:S106n"+Replace this use of System.out by a logger.(üÿÖ¡øÿÿÿÿ8Œ¨‰×»2J$bf31fbd7-fa91-401b-a55e-03cba04f9a5d

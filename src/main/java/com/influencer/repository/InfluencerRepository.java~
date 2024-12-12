@@ -1,0 +1,36 @@
+package com.influencer.repository;
+
+import com.influencer.model.Influencer;
+import org.springframework.data.mongodb.repository.MongoRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface InfluencerRepository extends MongoRepository<Influencer, Integer>, InfluencerRepositoryCustom {
+
+    Optional<Influencer> findByEmail(String email);
+
+
+//    @Aggregation(pipeline = {
+//            "{ $match: { email: ?0 } }", // Match Influencer by email
+//            "{ $lookup: { " +
+//                    "   from: 'authority', " + // Join with Authority collection
+//                    "   localField: '_id', " + // Match Influencer's _id
+//                    "   foreignField: 'influencer.$id', " + // Match Authority's influencer.$id (DBRef)
+//                    "   as: 'authorities' " + // Name of the resulting field
+//                    "} }"
+//    })
+//    Optional<Influencer> findInfluencerWithAuthorities(String email);
+
+//    @Aggregation(pipeline = {
+//            "{ $match: { email: ?0 } }",
+//            "{ $lookup: { from: 'authority', localField: '_id', foreignField: 'influencer', as: 'authorities' } }",
+//            "{ $unwind: '$authorities' }",
+//            "{ $project: { _id: 1, email: 1, authorities: { name: '$authorities.name' } } }"
+//    })
+//    Influencer findInfluencerWithAuthorities(String email);
+
+
+
+ }
