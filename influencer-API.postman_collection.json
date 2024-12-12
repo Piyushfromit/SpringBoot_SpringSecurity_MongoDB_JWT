@@ -101,7 +101,7 @@
 			"response": []
 		},
 		{
-			"name": "Generate-Token",
+			"name": "Login",
 			"request": {
 				"method": "POST",
 				"header": [],
@@ -154,14 +154,6 @@
 						"authenticated"
 					]
 				}
-			},
-			"response": []
-		},
-		{
-			"name": "UserInfo",
-			"request": {
-				"method": "GET",
-				"header": []
 			},
 			"response": []
 		}
