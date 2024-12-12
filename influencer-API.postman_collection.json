@@ -1,0 +1,169 @@
+{
+	"info": {
+		"_postman_id": "5173da5d-f892-4b3f-8845-465de426e6a5",
+		"name": "influencer-API",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "26860496",
+		"_collection_link": "https://influencercollection.postman.co/workspace/Influencer_Collection-Workspace~0b79a59b-2d60-431d-a82b-56d76252c83a/collection/26860496-5173da5d-f892-4b3f-8845-465de426e6a5?action=share&source=collection_link&creator=26860496"
+	},
+	"item": [
+		{
+			"name": "Demo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.20.1.83:8080/welcome",
+					"host": [
+						"10",
+						"20",
+						"1",
+						"83"
+					],
+					"port": "8080",
+					"path": [
+						"welcome"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register/sendOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "// {\r\n//     \"name\": \"Piyush\",\r\n//     \"email\": \"piyush@gmail.com\",\r\n//     \"password\": \"Piyush@123\"\r\n// }\r\n\r\n{\r\n    \"name\": \"Piyush\",\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"mobileNumber\": \"7903191158\",\r\n    \"pwd\": \"Piyush@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.20.1.83:8082/register",
+					"host": [
+						"10",
+						"20",
+						"1",
+						"83"
+					],
+					"port": "8082",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"otp\": \"6548\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.20.1.83:8082/verify-otp",
+					"host": [
+						"10",
+						"20",
+						"1",
+						"83"
+					],
+					"port": "8082",
+					"path": [
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Generate-Token",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyush@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "10.20.1.83:8080/generate-token",
+					"host": [
+						"10",
+						"20",
+						"1",
+						"83"
+					],
+					"port": "8080",
+					"path": [
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check-Authentication",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJFYXp5IEJhbmsiLCJzdWIiOiJKV1QgVG9rZW4iLCJ1c2VybmFtZSI6InBpeXVzaDIwQGdtYWlsLmNvbSIsImF1dGhvcml0aWVzIjoiUk9MRV9BRE1JTixST0xFX1VTRVIiLCJpYXQiOjE3MzM5MjM1NjgsImV4cCI6MTczMzk1MzU2OH0.5eGhaoDltDvUXWa0J4SRgmqQY5RZh6LAIR5VpSWIVhw",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "10.20.1.83:8082/authenticated",
+					"host": [
+						"10",
+						"20",
+						"1",
+						"83"
+					],
+					"port": "8082",
+					"path": [
+						"authenticated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "UserInfo",
+			"request": {
+				"method": "GET",
+				"header": []
+			},
+			"response": []
+		}
+	]
+}
