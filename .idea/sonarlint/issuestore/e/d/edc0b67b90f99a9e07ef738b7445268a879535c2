@@ -1,0 +1,12 @@
+
+r
+java:S14881"\Immediately return this expression instead of assigning it to the temporary variable "code".(ŠÈ’˜
+o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ð˜ŽÎ
+X
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
+u
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(á£ïÊ
+Q	java:S125"<This block of commented-out lines of code should be removed.(Ë›õ„
+9
+java:S2119*"Save and re-use this "Random".(šŸ«íøÿÿÿÿ
+V	java:S1256"<This block of commented-out lines of code should be removed.(Õ›‘€úÿÿÿÿ

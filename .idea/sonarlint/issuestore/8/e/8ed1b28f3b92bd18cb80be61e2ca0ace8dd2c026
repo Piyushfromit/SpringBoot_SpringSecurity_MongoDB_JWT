@@ -1,15 +1,15 @@
 
 `	java:S112S"FDefine and throw a dedicated exception instead of using a generic one.(Âº»Íùÿÿÿÿ
 `	java:S112f"FDefine and throw a dedicated exception instead of using a generic one.(Âº»Íùÿÿÿÿ
-x
-java:S1192R"]Define a constant instead of duplicating this literal "Error registering influencer" 4 times.(Ôõñ…ûÿÿÿÿ
 a
 java:S1192m"FDefine a constant instead of duplicating this literal "maxId" 3 times.(“ìÉŸşÿÿÿÿ
+x
+java:S1192R"]Define a constant instead of duplicating this literal "Error registering influencer" 4 times.(Ôõñ…ûÿÿÿÿ
 o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ˜Î
 S
-java:S2589["8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ
-S
 java:S25895"8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ
+S
+java:S2589["8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ
 X
 java:S6813 "BRemove this field injection and use constructor injection instead.(êæÄŞ
 X
