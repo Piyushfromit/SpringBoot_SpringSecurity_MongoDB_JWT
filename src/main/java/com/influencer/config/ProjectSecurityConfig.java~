@@ -72,7 +72,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers( "/myBalance").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/myLoans").hasRole("USER")
                         .requestMatchers(  "/myCards").hasRole("USER")
-                        .requestMatchers( "/user").authenticated()
+                        .requestMatchers( "/user").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/authenticated").hasAnyRole("USER", "ADMIN")
                 .requestMatchers(  "/welcome", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp").permitAll());
         http.formLogin(withDefaults());

@@ -15,7 +15,7 @@ public class EmailService {
     private JavaMailSender javaMailSender;
 
 
-    public void sendRegistrationOtpOnMail(String name, String email, String otp) {
+    public void sendRegistrationOtpOnMail( String email, String otp) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
             message.setTo(email);
@@ -23,8 +23,8 @@ public class EmailService {
             message.setSubject("Complete Your Registration: OTP Verification Code");
 
             StringBuffer body = new StringBuffer();
-            body.append("Dear ").append(name).append(",\n\n");
-            body.append("Your OTP is: ").append(otp).append("\n\n");
+            body.append("Dear User,").append("\n\n");
+            body.append("Your registration OTP is: ").append(otp).append("\n\n");
             body.append("Enter this code to complete your registration.\n\n");
             body.append("Best regards,\n");
             body.append("The Influencer Team");

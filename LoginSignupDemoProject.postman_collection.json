@@ -1,10 +1,9 @@
 {
 	"info": {
-		"_postman_id": "5173da5d-f892-4b3f-8845-465de426e6a5",
-		"name": "influencer-API",
+		"_postman_id": "5e3b7bd9-8a14-4e11-bc49-534d3d153edb",
+		"name": "LoginSignupDemoProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "26860496",
-		"_collection_link": "https://influencercollection.postman.co/workspace/Influencer_Collection-Workspace~0b79a59b-2d60-431d-a82b-56d76252c83a/collection/26860496-5173da5d-f892-4b3f-8845-465de426e6a5?action=share&source=collection_link&creator=26860496"
+		"_exporter_id": "21701678"
 	},
 	"item": [
 		{
@@ -25,16 +24,13 @@
 					}
 				},
 				"url": {
-					"raw": "10.20.1.83:8080/welcome",
+					"raw": "localhost:8081/",
 					"host": [
-						"10",
-						"20",
-						"1",
-						"83"
+						"localhost"
 					],
-					"port": "8080",
+					"port": "8081",
 					"path": [
-						"welcome"
+						""
 					]
 				}
 			},
@@ -115,14 +111,11 @@
 					}
 				},
 				"url": {
-					"raw": "10.20.1.83:8080/generate-token",
+					"raw": "localhost:8081/generate-token",
 					"host": [
-						"10",
-						"20",
-						"1",
-						"83"
+						"localhost"
 					],
-					"port": "8080",
+					"port": "8081",
 					"path": [
 						"generate-token"
 					]

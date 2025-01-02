@@ -74,7 +74,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers(  "/myCards").hasRole("USER")
                         .requestMatchers( "/user").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/authenticated").hasAnyRole("USER", "ADMIN")
-                .requestMatchers(  "/welcome", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp").permitAll());
+                .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(httpBasicConfig -> httpBasicConfig.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
         http.exceptionHandling(exceptionHandlingConfig ->exceptionHandlingConfig.accessDeniedHandler(new CustomAccessDeniedHandler()));

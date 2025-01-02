@@ -21,7 +21,8 @@ import org.springframework.stereotype.Service;
 import org.springframework.data.mongodb.core.query.Update;
 import static org.springframework.data.mongodb.core.FindAndModifyOptions.options;
 
-import java.util.Date;
+import java.time.Instant;
+import java.time.LocalDateTime;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 
@@ -55,7 +56,6 @@ public class InfluencerServiceImpl implements InfluencerService {
             }
             Influencer influencer = new Influencer();
             influencer.setId(generateUniqueIntegerId(collectionName));
-            influencer.setName(latestRegistrationOtp.getName());
             influencer.setEmail(latestRegistrationOtp.getEmail());
             //influencer.setPwd(latestRegistrationOtp.getPwd());
             String hashPwd = passwordEncoder.encode(latestRegistrationOtp.getPassword());
@@ -94,8 +94,9 @@ public class InfluencerServiceImpl implements InfluencerService {
             int id = generateUniqueIntegerId(collectionName);
             registrationOtp.setId(id);
             registrationOtp.setOtp(otp);
-            registrationOtp.setCreatedAt(new Date());
-            registrationOtp.setExpiresAt(new Date());
+            Instant expirationTime = Instant.now().plusSeconds(10 * 60); // OTP valid for 10 minutes
+            registrationOtp.setExpirationTime(expirationTime);
+            registrationOtp.setCreatedDate(LocalDateTime.now());
             return registrationOtpRepository.save(registrationOtp);
         } catch (Exception e) {
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Error registering influencer", e);

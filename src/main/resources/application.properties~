@@ -12,15 +12,16 @@ logging.pattern.console=${LOGPATTERN_CONSOLE:%green(%d{HH:mm:ss.SSS}) %blue(%-5l
 # Session Timeout
 server.servlet.session.timeout=${SESSION_TIMEOUT:30m}
 # Server Port
-server.port=${SERVER_PORT:8083}
+server.port=${SERVER_PORT:8081}
 
 
 
 
 
-# Local MongoDB URI Database Configuration
-spring.data.mongodb.uri=mongodb://localhost:27017/influencers2
-spring.data.mongodb.database=influencers2
+#===================== Local MongoDB Database Configuration================
+#spring.data.mongodb.uri=mongodb+srv://harkesh:harkesh@trustpipile.rkob7k6.mongodb.net/trustpiple?retryWrites=true&w=majority
+spring.data.mongodb.uri=mongodb://localhost:27017/demoprojectdb
+spring.data.mongodb.database=demoprojectdb
 spring.main.allow-bean-definition-overriding=true
 
 
