@@ -1,3 +1,9 @@
 
+^
+java:S1854"<Remove this useless assignment to local variable "username".(Ã¿Èæÿÿÿÿÿ8¼Œ¨âÂ2
+t
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¬Îÿ„ùÿÿÿÿ8¿Œ¨âÂ2
+O
+java:S1481"-Remove this unused "username" local variable.(Ã¿Èæÿÿÿÿÿ8ÀŒ¨âÂ2
 “
-java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†8ış³Ö»2J$cba2a5c6-300c-4faf-97e2-be62b48e62d2
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†8ış³Ö»2J$cba2a5c6-300c-4faf-97e2-be62b48e62d2

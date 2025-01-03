@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "5e3b7bd9-8a14-4e11-bc49-534d3d153edb",
+		"_postman_id": "2299eaef-b177-49e3-8fe9-c41592dba52c",
 		"name": "LoginSignupDemoProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21701678"
+		"_exporter_id": "26860496"
 	},
 	"item": [
 		{
@@ -43,7 +43,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "// {\r\n//     \"name\": \"Piyush\",\r\n//     \"email\": \"piyush@gmail.com\",\r\n//     \"password\": \"Piyush@123\"\r\n// }\r\n\r\n{\r\n    \"name\": \"Piyush\",\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"mobileNumber\": \"7903191158\",\r\n    \"pwd\": \"Piyush@123\"\r\n}",
+					"raw": "{\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -51,14 +51,14 @@
 					}
 				},
 				"url": {
-					"raw": "10.20.1.83:8082/register",
+					"raw": "10.20.1.83:8081/register",
 					"host": [
 						"10",
 						"20",
 						"1",
 						"83"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"register"
 					]
@@ -73,7 +73,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"otp\": \"6548\"\r\n}",
+					"raw": "{\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"otp\": \"9581\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -81,14 +81,14 @@
 					}
 				},
 				"url": {
-					"raw": "10.20.1.83:8082/verify-otp",
+					"raw": "10.20.1.83:8081/verify-otp",
 					"host": [
 						"10",
 						"20",
 						"1",
 						"83"
 					],
-					"port": "8082",
+					"port": "8081",
 					"path": [
 						"verify-otp"
 					]
@@ -103,7 +103,7 @@
 				"header": [],
 				"body": {
 					"mode": "raw",
-					"raw": "{\r\n    \"email\": \"piyush@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
+					"raw": "{\r\n    \"email\": \"piyush20@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
 					"options": {
 						"raw": {
 							"language": "json"
@@ -145,6 +145,33 @@
 					"port": "8082",
 					"path": [
 						"authenticated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-forget-pwd-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"piyush20@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/send-forget-pwd-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"send-forget-pwd-otp"
 					]
 				}
 			},
