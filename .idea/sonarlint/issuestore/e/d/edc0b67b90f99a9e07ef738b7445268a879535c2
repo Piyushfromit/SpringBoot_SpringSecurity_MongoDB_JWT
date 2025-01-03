@@ -1,12 +1,15 @@
 
-r
-java:S14881"\Immediately return this expression instead of assigning it to the temporary variable "code".(ŠÈ’˜
-o	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ð˜ŽÎ
-X
-java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞ
-u
-java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(á£ïÊ
-Q	java:S125"<This block of commented-out lines of code should be removed.(Ë›õ„
-9
-java:S2119*"Save and re-use this "Random".(šŸ«íøÿÿÿÿ
-V	java:S1256"<This block of commented-out lines of code should be removed.(Õ›‘€úÿÿÿÿ
+˜
+java:S1488H"\Immediately return this expression instead of assigning it to the temporary variable "code".(ŠÈ’˜J$95637fb1-b09f-461f-b2ce-035c31103bf2
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ð˜ŽÎJ$9ab7a95e-44a1-41e3-8abd-ef3acdaedfaf
+~
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄÞJ$2d0431e8-e0c2-459d-80c4-bc844179f2ee
+›
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(á£ïÊJ$47907fb0-32ec-49af-b1bb-e0eb19a4dc3f
+¢
+java:S11490"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(á£ïÊ8€¶àÂ2J$42d404c2-6fd0-4bd9-a75e-751a48ac176b
+w	java:S125"<This block of commented-out lines of code should be removed.(Ë›õ„J$47e99315-562d-4ac6-ab13-1c97c152ad5d
+~	java:S125-"<This block of commented-out lines of code should be removed.(Ë›õ„8ƒ¶àÂ2J$4a7de5bb-9d94-4bf5-af84-28c999abbcef
+_
+java:S2119A"Save and re-use this "Random".(šŸ«íøÿÿÿÿJ$faec0369-6083-48bf-80ea-442a599c0991
+|	java:S125O"<This block of commented-out lines of code should be removed.(Õ›‘€úÿÿÿÿJ$daf0dffd-deb7-4daa-8591-f16b4520f635

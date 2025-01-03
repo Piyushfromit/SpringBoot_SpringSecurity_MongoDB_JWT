@@ -38,6 +38,21 @@ public class EmailService {
             e.printStackTrace();
         }
     }
+
+
+    public String generateCode() {
+        // Generate a random 4-digit code
+        Random rand = new Random();
+        int code = rand.nextInt(9999 - 1000) + 1000;
+        return String.valueOf(code);
+    }
+    public String generateCode2() {
+        // Generate a random 4-digit code
+        UUID uuid = UUID.randomUUID();
+        String code = uuid.toString().substring(0, 4);
+        return code;
+    }
+
     public void sendForgetPasswordOtpOnMailUsingSMTP(String name, String toEmail, String otp) {
         try {
             SimpleMailMessage message = new SimpleMailMessage();
@@ -59,21 +74,6 @@ public class EmailService {
             log.error("Failed to send email for Forget password: {}. Error: {}", toEmail, e.getMessage());
         }
     }
-
-    public String generateCode() {
-        // Generate a random 4-digit code
-        Random rand = new Random();
-        int code = rand.nextInt(9999 - 1000) + 1000;
-        return String.valueOf(code);
-    }
-    public String generateCode2() {
-        // Generate a random 4-digit code
-        UUID uuid = UUID.randomUUID();
-        String code = uuid.toString().substring(0, 4);
-        return code;
-    }
-
-
 
 
 //    public  void sendRegistrationOtpOnMail(String personName, String email, String otp) {

@@ -59,3 +59,13 @@ j
 :src/main/java/com/influencer/serviceImpl/EmailService.java,e\d\edc0b67b90f99a9e07ef738b7445268a879535c2
 k
 ;src/main/java/com/influencer/service/InfluencerService.java,5\e\5e0d121dec4683126d2ad5d78459299328ed5abb
+r
+Bsrc/main/java/com/influencer/controller/LoginSignUpController.java,f\a\fa1e0f516c1f2f966fac0dd19b0bc1c635b75217
+m
+=src/main/java/com/influencer/model/ForgetPasswordRequest.java,c\2\c26204197357daa30a73443d5d658f7c0ab5af6e
+h
+8src/main/java/com/influencer/model/PasswordResetOtp.java,6\0\601d3226fa4dbda69f2e1dc16c4fa31cbc4eacff
+w
+Gsrc/main/java/com/influencer/repository/PasswordResetOtpRepository.java,b\0\b045e9832a22340f6824d63affcb880b4b1658eb
+l
+<src/main/java/com/influencer/model/ResetPasswordRequest.java,3\a\3a498ca9c0d9be55259d9c1433dfb60d2f6425b8

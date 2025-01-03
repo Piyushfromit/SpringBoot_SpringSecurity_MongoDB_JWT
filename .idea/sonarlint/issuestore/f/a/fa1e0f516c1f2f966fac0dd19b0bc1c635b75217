@@ -1,0 +1,13 @@
+
+³
+java:S1192l"kDefine a constant instead of duplicating this literal "OTP has expired. Please request a new one." 3 times.(Û–ÊÔøÿÿÿÿ8õîáÂ2J$78dedc78-1813-4607-b9f6-e5f5c70c19ec
+x
+java:S1066„"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8‘š¦áÂ2J$47445e3b-a53f-43d1-b15b-d41c9e3ce009
+}
+java:S1141A"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8‘š¦áÂ2J$526ced02-1c48-42e1-a310-deff054bf63b
+‚
+java:S46849"@Replace this persistent entity with a simple POJO or DTO object.(¸úµ8ªš¦áÂ2J$80b4cf4a-88a7-4220-83d8-4d76c8b4bca7
+~	java:S125["<This block of commented-out lines of code should be removed.(Ú—¨ô8¯š¦áÂ2J$5cd28259-bb9e-43da-852b-045c8fcca485
+r	java:S106v"+Replace this use of System.out by a logger.(üÿÖ¡øÿÿÿÿ8²š¦áÂ2J$172b1aea-8229-46ba-9020-09ff6532c4a2
+s	java:S106£"+Replace this use of System.out by a logger.(ë¾à½øÿÿÿÿ8¶š¦áÂ2J$14431472-e98c-430d-a569-acd4575b64b0
+„	java:S125¥"<This block of commented-out lines of code should be removed.(ìüúÿÿÿÿ8¸š¦áÂ2J$0b1fa261-9db0-47fa-8500-bd916c8807f1

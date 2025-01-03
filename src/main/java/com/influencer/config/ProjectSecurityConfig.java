@@ -55,7 +55,7 @@ public class ProjectSecurityConfig {
                 }))
 
                 .csrf(csrfConfigurer -> csrfConfigurer.csrfTokenRequestHandler(csrfTokenRequestAttributeHandler)
-                        .ignoringRequestMatchers( "/welcome", "/register", "/generate-token", "/verify-otp")  // to ignore the CSRF Protection for these URLs
+                        .ignoringRequestMatchers(  "/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp")  // to ignore the CSRF Protection for these URLs
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
                 // Custom Filters
                 .addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
@@ -74,7 +74,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers(  "/myCards").hasRole("USER")
                         .requestMatchers( "/user").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/authenticated").hasAnyRole("USER", "ADMIN")
-                .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp").permitAll());
+                .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(httpBasicConfig -> httpBasicConfig.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
         http.exceptionHandling(exceptionHandlingConfig ->exceptionHandlingConfig.accessDeniedHandler(new CustomAccessDeniedHandler()));
