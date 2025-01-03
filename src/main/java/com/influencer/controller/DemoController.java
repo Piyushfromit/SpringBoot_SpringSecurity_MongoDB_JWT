@@ -28,7 +28,6 @@ public class DemoController {
             if (authentication != null && authentication.isAuthenticated()) { // not necessary to check, as we are using doFilterInternal filter
                 String userEmail = authentication.getName();  // Get the authenticated user's email
                 List<String> roles = authentication.getAuthorities().stream().map(GrantedAuthority::getAuthority).collect(Collectors.toList());
-                String username = authentication.getName(); // Get the username from the token
                 return "User: " + userEmail + " is authenticated! and roles are " + roles.toString();
             }
             return "Unauthorized";

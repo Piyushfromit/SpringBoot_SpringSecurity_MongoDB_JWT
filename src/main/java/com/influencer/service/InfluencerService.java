@@ -2,20 +2,20 @@ package com.influencer.service;
 
 
 
-import com.influencer.model.PasswordResetOtp;
-import com.influencer.model.RegistrationOtp;
+import com.influencer.entity.ForgetPasswordOtp;
+import com.influencer.entity.RegistrationOtp;
+import com.influencer.model.RegistrationRequestDTO;
 
 public interface InfluencerService {
 
 
-    public void registerInfluencer(RegistrationOtp latestRegistrationOtp);
+    public void registerUser(RegistrationOtp latestRegistrationOtp);
 
-    public RegistrationOtp saveRegOtpToDB(RegistrationOtp registrationOtp, String otp);
+    public RegistrationOtp saveRegistrationOtp(RegistrationRequestDTO registrationOtp, String otp);
 
+    public ForgetPasswordOtp saveForgetPasswordOtp(String email, String otp);
 
-    public PasswordResetOtp savePasswordResetOtp(String email, String otp);
+    public ForgetPasswordOtp updateForgetPasswordOtp(ForgetPasswordOtp latestRegistrationOtp, String resetToken);
 
-    public PasswordResetOtp updatePasswordResetOtp(PasswordResetOtp latestRegistrationOtp, String resetToken);
-
-    public boolean resetInfluencerPwd(String userEmail, String newPassword);
+    public boolean resetForgetPassword(String userEmail, String newPassword);
 }

@@ -1,0 +1,277 @@
+{
+	"info": {
+		"_postman_id": "1cd30e52-2b02-4f79-b632-d915bb80ed06",
+		"name": "LoginSignupDemoProject",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "21701678"
+	},
+	"item": [
+		{
+			"name": "Demo",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register/sendOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyushfrommasai@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/register",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "VerifyOTP",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyushfrommasai@gmail.com\",\r\n    \"otp\": \"7754\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/verify-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"verify-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyushfrommasai@gmail.com\",\r\n    \"password\": \"Piyush@123\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/generate-token",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"generate-token"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login2",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"auth": {
+					"type": "basic",
+					"basic": [
+						{
+							"key": "username",
+							"value": "piyushfrommasai@gmail.com",
+							"type": "string"
+						},
+						{
+							"key": "password",
+							"value": "Piyush@123",
+							"type": "string"
+						}
+					]
+				},
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJbmZsdWVuY2VyIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiJwaXl1c2hmcm9tbWFzYWlAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImlhdCI6MTczNTkzNjYxOCwiZXhwIjoxNzM2MDIzMDE4fQ.b67lZVwRAsxqsE7pLsYuMPpERy8JJno0YNyJmdmhJg4",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/user",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"user"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Check-Authentication",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJbmZsdWVuY2VyIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiJwaXl1c2hmcm9tbWFzYWlAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImlhdCI6MTczNTkzODQ3NiwiZXhwIjoxNzM1OTY4NDc2fQ.AfH2pRtQf36KEGvyLqMPXejVlb_UVoVfGjugEaIlMmg",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:8081/authenticated",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"authenticated"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "send-forget-pwd-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"piyushfrommasai@gmail.com\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/send-forget-pwd-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"send-forget-pwd-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "verify-forget-pwd-otp",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\": \"piyushfrommasai@gmail.com\",\r\n    \"otp\": \"6291\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/verify-forget-pwd-otp",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"verify-forget-pwd-otp"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "reset-forget-pwd",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"email\":\"piyushfrommasai@gmail.com\",\r\n    \"newPassword\":\"Piyush@123\",\r\n    \"resetToken\":\"3f1b31ea-d7bb-430a-b610-3584d83517ce\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/reset-forget-pwd",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"reset-forget-pwd"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}

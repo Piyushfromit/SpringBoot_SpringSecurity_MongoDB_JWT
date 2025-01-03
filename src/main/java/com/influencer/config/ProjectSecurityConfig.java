@@ -55,7 +55,7 @@ public class ProjectSecurityConfig {
                 }))
 
                 .csrf(csrfConfigurer -> csrfConfigurer.csrfTokenRequestHandler(csrfTokenRequestAttributeHandler)
-                        .ignoringRequestMatchers(  "/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp")  // to ignore the CSRF Protection for these URLs
+                        .ignoringRequestMatchers(  "/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp", "/verify-forget-pwd-otp","/reset-forget-pwd")  // to ignore the CSRF Protection for these URLs
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
                 // Custom Filters
                 .addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
@@ -68,13 +68,14 @@ public class ProjectSecurityConfig {
                // .sessionManagement(sessionManagementConfiguration ->  sessionManagementConfiguration.invalidSessionUrl("/invalidSession").maximumSessions(10).maxSessionsPreventsLogin(true))
                 .requiresChannel(requestChannelConfiguration -> requestChannelConfiguration.anyRequest().requiresInsecure()) // Only HTTP
                 .authorizeHttpRequests((requests) -> requests
+                        .requestMatchers( "/user").authenticated()
                         .requestMatchers( "/myAccount").hasRole("USER")
                         .requestMatchers( "/myBalance").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/myLoans").hasRole("USER")
                         .requestMatchers(  "/myCards").hasRole("USER")
-                        .requestMatchers( "/user").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/authenticated").hasAnyRole("USER", "ADMIN")
-                .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp").permitAll());
+                .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp",
+                "/verify-forget-pwd-otp", "/reset-forget-pwd").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(httpBasicConfig -> httpBasicConfig.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));
         http.exceptionHandling(exceptionHandlingConfig ->exceptionHandlingConfig.accessDeniedHandler(new CustomAccessDeniedHandler()));

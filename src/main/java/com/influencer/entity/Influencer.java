@@ -1,6 +1,7 @@
-package com.influencer.model;
+package com.influencer.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
+
 import jakarta.validation.constraints.Email;
 import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.Pattern;
@@ -12,10 +13,10 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
-import java.util.List;
 import java.util.Set;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "influencer")
@@ -39,8 +40,7 @@ public class Influencer {
     private String contact;
     private String status; // ACTIVE, INACTIVE, BANNED
     private LocalDateTime registeredAt;
-    private List<SocialMediaPlatform> socialMediaPlatforms; // e.g., Instagram, YouTube, Twitter
-    private List<ReferralCoupon> referralCoupons;
+
 
 
     @DBRef(lazy = true) // Use lazy loading for better performance

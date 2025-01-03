@@ -69,12 +69,11 @@ public class ProjectSecurityProdConfig {
                 //.sessionManagement(sessionManagementConfiguration ->  sessionManagementConfiguration.invalidSessionUrl("/invalidSession").maximumSessions(10).maxSessionsPreventsLogin(true))
                 .requiresChannel(requestChannelConfiguration -> requestChannelConfiguration.anyRequest().requiresSecure())   // Only HTTPS
                 .authorizeHttpRequests((requests) -> requests
-
+                        .requestMatchers( "/user").authenticated()
                         .requestMatchers( "/myAccount").hasRole("USER")
                         .requestMatchers( "/myBalance").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/myLoans").hasRole("USER")
                         .requestMatchers(  "/myCards").hasRole("USER")
-                        .requestMatchers( "/user").authenticated()
                     .requestMatchers("/welcome", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp").permitAll());
         http.formLogin(withDefaults());
         http.httpBasic(httpBasicConfig -> httpBasicConfig.authenticationEntryPoint(new CustomBasicAuthenticationEntryPoint()));

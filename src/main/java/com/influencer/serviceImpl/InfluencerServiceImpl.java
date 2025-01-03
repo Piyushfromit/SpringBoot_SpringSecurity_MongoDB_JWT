@@ -1,6 +1,7 @@
 package com.influencer.serviceImpl;
 
-import com.influencer.model.*;
+import com.influencer.entity.*;
+import com.influencer.model.RegistrationRequestDTO;
 import com.influencer.repository.AuthorityRepository;
 import com.influencer.repository.InfluencerRepository;
 import com.influencer.repository.PasswordResetOtpRepository;
@@ -51,7 +52,7 @@ public class InfluencerServiceImpl implements InfluencerService {
 
 
     @Override
-    public void registerInfluencer( RegistrationOtp latestRegistrationOtp) {
+    public void registerUser(RegistrationOtp latestRegistrationOtp) {
         try {
             String collectionName = Influencer.class.getAnnotation(Document.class).collection();
             if (collectionName == null || collectionName.isEmpty()) {
@@ -88,14 +89,17 @@ public class InfluencerServiceImpl implements InfluencerService {
     }
 
     @Override
-    public RegistrationOtp saveRegOtpToDB(RegistrationOtp registrationOtp, String otp) {
+    public RegistrationOtp saveRegistrationOtp(RegistrationRequestDTO registrationRequest, String otp) {
         try {
             String collectionName = RegistrationOtp.class.getAnnotation(Document.class).collection();
             if (collectionName == null || collectionName.isEmpty()) {
                 throw new IllegalStateException("Collection name is not defined for Influencer class");
             }
             int id = generateUniqueIntegerId(collectionName);
+            RegistrationOtp registrationOtp = new RegistrationOtp();
             registrationOtp.setId(id);
+            registrationOtp.setEmail(registrationRequest.email());
+            registrationOtp.setPassword(registrationRequest.password());
             registrationOtp.setOtp(otp);
             Instant expirationTime = Instant.now().plusSeconds(10 * 60); // OTP valid for 10 minutes
             registrationOtp.setExpirationTime(expirationTime);
@@ -141,25 +145,24 @@ public class InfluencerServiceImpl implements InfluencerService {
 
 
     @Override
-    public PasswordResetOtp savePasswordResetOtp(String email, String otp) {
+    public ForgetPasswordOtp saveForgetPasswordOtp(String email, String otp) {
         try {
-            String collectionName = PasswordResetOtp.class.getAnnotation(Document.class).collection();
+            String collectionName = ForgetPasswordOtp.class.getAnnotation(Document.class).collection();
             if (collectionName == null || collectionName.isEmpty()) {
                 throw new IllegalStateException("Collection name is not defined for Influencer class");
             }
             int id = generateUniqueIntegerId(collectionName);
             // Generate expiration time
             Instant expirationTime = Instant.now().plusSeconds(10 * 60); // OTP valid for 10 minutes
-            // Create a new PasswordResetOtp entity and set values
-            PasswordResetOtp passwordResetOtp = new PasswordResetOtp();
-            passwordResetOtp.setId(id);
-            passwordResetOtp.setEmail(email);
-            passwordResetOtp.setOtp(otp);
-            passwordResetOtp.setExpirationTime(expirationTime);
-            passwordResetOtp.setCreatedAt(new Date());
-            passwordResetOtp.setUsed(false);
-            // Save OTP to the database
-            return passwordResetOtpRepository.save(passwordResetOtp);
+            // Create a new ForgetPasswordOtp entity and set values
+            ForgetPasswordOtp forgetPasswordOtp = new ForgetPasswordOtp();
+            forgetPasswordOtp.setId(id);
+            forgetPasswordOtp.setEmail(email);
+            forgetPasswordOtp.setOtp(otp);
+            forgetPasswordOtp.setExpirationTime(expirationTime);
+            forgetPasswordOtp.setCreatedDate(LocalDateTime.now());
+            forgetPasswordOtp.setUsed(false);
+            return passwordResetOtpRepository.save(forgetPasswordOtp);
         } catch (Exception e) {
             // Log error
             Logger.getLogger(this.getClass().getName()).log(Level.SEVERE, "Error saving OTP for email: " + email, e);
@@ -168,7 +171,7 @@ public class InfluencerServiceImpl implements InfluencerService {
     }
 
     @Override
-    public PasswordResetOtp updatePasswordResetOtp(PasswordResetOtp latestRegistrationOtp, String resetToken) {
+    public ForgetPasswordOtp updateForgetPasswordOtp(ForgetPasswordOtp latestRegistrationOtp, String resetToken) {
         Instant resetTokenExpiration = Instant.now().plusSeconds(10 * 60);  // Token expires in 10 minutes
         latestRegistrationOtp.setResetToken(resetToken);
         latestRegistrationOtp.setExpirationTime(resetTokenExpiration); // Update expiration time for the reset token
@@ -177,7 +180,7 @@ public class InfluencerServiceImpl implements InfluencerService {
     }
 
     @Override
-    public boolean resetInfluencerPwd(String email, String newPassword) {
+    public boolean resetForgetPassword(String email, String newPassword) {
         Optional<Influencer> existingInfluencer = influencerRepository.findByEmail(email);
         if (existingInfluencer.isPresent()) {
             Influencer existingInfluencerDetails = existingInfluencer.get();

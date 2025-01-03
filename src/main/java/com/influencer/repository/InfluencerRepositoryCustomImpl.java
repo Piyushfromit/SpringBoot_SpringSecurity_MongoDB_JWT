@@ -7,8 +7,8 @@ import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
 import org.springframework.stereotype.Repository;
 
-import com.influencer.model.Influencer;
-import com.influencer.model.Authority;
+import com.influencer.entity.Influencer;
+import com.influencer.entity.Authority;
 
 import java.util.Optional;
 import java.util.HashSet;

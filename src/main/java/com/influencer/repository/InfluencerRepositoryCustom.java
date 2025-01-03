@@ -1,7 +1,7 @@
 package com.influencer.repository;
 
 
-import com.influencer.model.Influencer;
+import com.influencer.entity.Influencer;
 
 import java.util.Optional;
 

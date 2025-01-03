@@ -1,6 +1,6 @@
 package com.influencer.repository;
 
-import com.influencer.model.Influencer;
+import com.influencer.entity.Influencer;
 import org.springframework.data.mongodb.repository.MongoRepository;
 import org.springframework.stereotype.Repository;
 

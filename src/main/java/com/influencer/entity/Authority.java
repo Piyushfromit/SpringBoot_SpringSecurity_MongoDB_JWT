@@ -1,4 +1,4 @@
-package com.influencer.model;
+package com.influencer.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.*;
@@ -6,7 +6,8 @@ import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-@Data
+@Getter
+@Setter
 @AllArgsConstructor
 @NoArgsConstructor
 @Document(collection = "authority")
@@ -14,7 +15,6 @@ public class Authority {
 
     @Id
     private long id;
-
     private String name;
 
     @JsonIgnore // Prevent circular references during serialization

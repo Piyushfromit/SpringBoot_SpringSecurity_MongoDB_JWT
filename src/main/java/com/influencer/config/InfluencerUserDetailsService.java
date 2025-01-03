@@ -1,6 +1,6 @@
 package com.influencer.config;
 
-import com.influencer.model.Influencer;
+import com.influencer.entity.Influencer;
 import com.influencer.repository.InfluencerRepository;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.GrantedAuthority;
