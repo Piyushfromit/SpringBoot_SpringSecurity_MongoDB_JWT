@@ -55,7 +55,7 @@ public class ProjectSecurityConfig {
                 }))
 
                 .csrf(csrfConfigurer -> csrfConfigurer.csrfTokenRequestHandler(csrfTokenRequestAttributeHandler)
-                        .ignoringRequestMatchers(  "/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp", "/verify-forget-pwd-otp","/reset-forget-pwd")  // to ignore the CSRF Protection for these URLs
+                        .ignoringRequestMatchers(  "/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp", "/verify-forget-pwd-otp","/reset-forget-pwd", "/update-password")  // to ignore the CSRF Protection for these URLs
                         .csrfTokenRepository(CookieCsrfTokenRepository.withHttpOnlyFalse()))
                 // Custom Filters
                 .addFilterAfter(new CsrfCookieFilter(), BasicAuthenticationFilter.class)
@@ -73,7 +73,7 @@ public class ProjectSecurityConfig {
                         .requestMatchers( "/myBalance").hasAnyRole("USER", "ADMIN")
                         .requestMatchers( "/myLoans").hasRole("USER")
                         .requestMatchers(  "/myCards").hasRole("USER")
-                        .requestMatchers( "/authenticated").hasAnyRole("USER", "ADMIN")
+                        .requestMatchers( "/authenticated", "/update-password").hasAnyRole("USER", "ADMIN")
                 .requestMatchers(  "/", "/error", "/logout",  "/invalidSession","/register", "/generate-token", "/verify-otp", "/send-forget-pwd-otp",
                 "/verify-forget-pwd-otp", "/reset-forget-pwd").permitAll());
         http.formLogin(withDefaults());

@@ -7,9 +7,9 @@ import com.influencer.entity.RegistrationOtp;
 import com.influencer.model.*;
 import com.influencer.repository.AuthorityRepository;
 import com.influencer.repository.InfluencerRepository;
-import com.influencer.repository.PasswordResetOtpRepository;
+import com.influencer.repository.ForgetPasswordOtpRepository;
 import com.influencer.repository.RegistrationOtpRepository;
-import com.influencer.service.InfluencerService;
+import com.influencer.service.LoginSignUpService;
 import com.influencer.serviceImpl.EmailService;
 import io.jsonwebtoken.Jwts;
 import io.jsonwebtoken.security.Keys;
@@ -31,7 +31,6 @@ import java.time.Instant;
 import java.time.LocalDateTime;
 import java.util.Comparator;
 
-import java.util.List;
 import java.util.Optional;
 import java.util.UUID;
 import java.util.stream.Collectors;
@@ -45,11 +44,11 @@ public class LoginSignUpController {
     private final AuthenticationManager authenticationManager;
     private final Environment env;
     private final EmailService emailService ;
-    private final InfluencerService influencerService;
+    private final LoginSignUpService influencerService;
     private final RegistrationOtpRepository registrationOtpRepository;
     private final AuthorityRepository authorityRepository;
     private final PasswordEncoder passwordEncoder;
-    private final PasswordResetOtpRepository passwordResetOtpRepository;
+    private final ForgetPasswordOtpRepository passwordResetOtpRepository;
 
 
 
@@ -82,7 +81,7 @@ public class LoginSignUpController {
 
 
     @PostMapping("/verify-otp")
-    public ResponseEntity<ApiResponse> verifyCode(@Valid @RequestBody OtpVerificationRequest otpVerificationReq) {
+    public ResponseEntity<ApiResponse> verifyCode(@Valid @RequestBody OtpVerificationRequestDTO otpVerificationReq) {
         Optional<Influencer> existingInfluencer = customerRepository.findByEmail(otpVerificationReq.email());
         if (existingInfluencer.isPresent()) {
             ApiResponse apiResponse = new ApiResponse(LocalDateTime.now(), HttpStatus.BAD_REQUEST.value(), "Account with "+otpVerificationReq.email()+" already exists", null);
@@ -155,7 +154,7 @@ public class LoginSignUpController {
 
 
     @PostMapping("/send-forget-pwd-otp")
-    public ResponseEntity<ApiResponse> forgetPassword( @Valid @RequestBody ForgetPasswordRequest forgetPasswordRequest) {
+    public ResponseEntity<ApiResponse> forgetPassword( @Valid @RequestBody ForgetPasswordEmailRequestDTO forgetPasswordRequest) {
         try {
             String userEmail = forgetPasswordRequest.email();
 
@@ -181,7 +180,7 @@ public class LoginSignUpController {
 
 
     @PostMapping("/verify-forget-pwd-otp")
-    public ResponseEntity<ApiResponse> verifyForgetPasswordOtp( @Valid @RequestBody OtpVerificationRequest verifyOtpRequest) {
+    public ResponseEntity<ApiResponse> verifyForgetPasswordOtp( @Valid @RequestBody OtpVerificationRequestDTO verifyOtpRequest) {
         try {
             String userEmail = verifyOtpRequest.email();
             String userOtp = verifyOtpRequest.otp();
@@ -220,7 +219,7 @@ public class LoginSignUpController {
 
 
     @PostMapping("/reset-forget-pwd")
-    public ResponseEntity<ApiResponse> resetPassword( @Valid  @RequestBody ResetPasswordRequest resetPasswordRequest) {
+    public ResponseEntity<ApiResponse> resetPassword( @Valid  @RequestBody ForgetPasswordRequestDTO resetPasswordRequest) {
         try {
             String userEmail = resetPasswordRequest.email();
             String newPassword = resetPasswordRequest.newPassword();
@@ -271,6 +270,15 @@ public class LoginSignUpController {
             return ResponseEntity.badRequest()
                     .body(new ApiResponse(LocalDateTime.now(), HttpStatus.BAD_REQUEST.value(), e.getMessage(), null));
         }
+    }
+
+
+
+    @PostMapping("/update-password")
+    public ResponseEntity<ApiResponse> updatePassword(Authentication authentication, @RequestBody  ChangePasswordRequestDTO forgetPasswordRequest) {
+        String userEmail = authentication.getName();
+        ResponseEntity<ApiResponse> isPasswordChanged  = influencerService.changeInfluencerPassword(userEmail, forgetPasswordRequest.oldPassword(), forgetPasswordRequest.newPassword());
+        return isPasswordChanged;
     }
 
 

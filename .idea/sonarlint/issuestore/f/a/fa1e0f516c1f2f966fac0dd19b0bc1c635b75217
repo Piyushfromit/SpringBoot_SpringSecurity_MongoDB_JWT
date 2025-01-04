@@ -1,13 +1,13 @@
 
+£
+java:S1192£"ZDefine a constant instead of duplicating this literal "User not Registered with " 3 times.(àš„Áüÿÿÿÿ8¥€å€Ã2J$67b5bbb4-7f8e-4f90-9ca5-a2f0dbbe0416
 ³
-java:S1192l"kDefine a constant instead of duplicating this literal "OTP has expired. Please request a new one." 3 times.(Û–ÊÔøÿÿÿÿ8õîáÂ2J$78dedc78-1813-4607-b9f6-e5f5c70c19ec
+java:S1192k"kDefine a constant instead of duplicating this literal "OTP has expired. Please request a new one." 3 times.(Û–ÊÔøÿÿÿÿ8õîáÂ2J$1787dd50-571d-41b2-bd3b-a8805c212697
 x
-java:S1066„"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8‘š¦áÂ2J$47445e3b-a53f-43d1-b15b-d41c9e3ce009
+java:S1066‰"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8‘š¦áÂ2J$09c10126-cd50-471e-b13c-6eaa7b54f118
 }
-java:S1141A"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8‘š¦áÂ2J$526ced02-1c48-42e1-a310-deff054bf63b
-‚
-java:S46849"@Replace this persistent entity with a simple POJO or DTO object.(¸úµ8ªš¦áÂ2J$80b4cf4a-88a7-4220-83d8-4d76c8b4bca7
-~	java:S125["<This block of commented-out lines of code should be removed.(Ú—¨ô8¯š¦áÂ2J$5cd28259-bb9e-43da-852b-045c8fcca485
-r	java:S106v"+Replace this use of System.out by a logger.(üÿÖ¡øÿÿÿÿ8²š¦áÂ2J$172b1aea-8229-46ba-9020-09ff6532c4a2
-s	java:S106£"+Replace this use of System.out by a logger.(ë¾à½øÿÿÿÿ8¶š¦áÂ2J$14431472-e98c-430d-a569-acd4575b64b0
-„	java:S125¥"<This block of commented-out lines of code should be removed.(ìüúÿÿÿÿ8¸š¦áÂ2J$0b1fa261-9db0-47fa-8500-bd916c8807f1
+java:S1141@"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8‘š¦áÂ2J$faec16f0-d844-4b5d-b294-e9a74726efe1
+²
+java:S1488˜"iImmediately return this expression instead of assigning it to the temporary variable "isPasswordChanged".(ŞøÍõşÿÿÿÿ8Ïæ‚Ã2J$173470f2-e01a-4e57-8fc6-1e98d2a5703d
+ƒ	java:S125Z"<This block of commented-out lines of code should be removed.(İ¹›Èøÿÿÿÿ8¯š¦áÂ2J$ba4e0e3b-4ed6-4c76-8f06-ed4fcb39f2c1
+„	java:S125©"<This block of commented-out lines of code should be removed.(ìüúÿÿÿÿ8¸š¦áÂ2J$ad771852-b7d5-4725-9a05-cec0740a3b25

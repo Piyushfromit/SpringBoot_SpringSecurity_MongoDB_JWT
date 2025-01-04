@@ -1,8 +1,6 @@
 
-
-java:S1192H"FDefine a constant instead of duplicating this literal "ADMIN" 3 times.(É”ú³üÿÿÿÿ8ÓÌÜÑ»2J$b8031a55-a66e-4714-8359-b38f4a3eb750
 i
-java:S1604*"(Make this anonymous inner class a lambda(»­ñğşÿÿÿÿJ$8c6abf31-97fc-4fa9-b33f-7dd6fa53451d
-}	java:S125."<This block of commented-out lines of code should be removed.(İ÷¿8«ØªÎ»2J$e7c47071-f198-4a15-a82f-340eb2eb6303
+java:S1604*"(Make this anonymous inner class a lambda(»­ñğşÿÿÿÿJ$44cd977c-a48b-46a2-9352-2fb5a2e62e71
+}	java:S125."<This block of commented-out lines of code should be removed.(İ÷¿8«ØªÎ»2J$5142f6a4-ca21-4464-b381-f61bd1ef91e5
 r
-java:S1611F"6Remove the parentheses around the "requests" parameter(¢ÌÀÈJ$da509080-96e4-42f3-8a9e-c1a069b3f9ee
+java:S1611F"6Remove the parentheses around the "requests" parameter(¢ÌÀÈJ$b1760fa5-8abe-4960-90bb-13777f4ad188

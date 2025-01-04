@@ -1,0 +1,49 @@
+
+†	java:S112T"FDefine and throw a dedicated exception instead of using a generic one.(Âº»ÍùÿÿÿÿJ$60378e88-2c18-40f0-9258-c3d09486df1c
+†	java:S112k"FDefine and throw a dedicated exception instead of using a generic one.(Âº»ÍùÿÿÿÿJ$c27c2e92-0ab5-4fc0-b89f-9d8b6ea63af1
+‰	java:S112¦"FDefine and throw a dedicated exception instead of using a generic one.(—¡±8åó˜àÂ2J$6396137d-688d-4392-b715-f4f4a848ae38
+‡
+java:S1192r"FDefine a constant instead of duplicating this literal "maxId" 3 times.(“ìÉŸşÿÿÿÿJ$46bb5c44-8c62-47e9-876f-a1969e06083f
+
+java:S1192S"]Define a constant instead of duplicating this literal "Error registering influencer" 4 times.(Ôõñ…ûÿÿÿÿJ$77da076e-0bb6-47ee-ae1c-b539385ee46d
+¼
+java:S11928"tDefine a constant instead of duplicating this literal "Collection name is not defined for Influencer class" 3 times.(ëï°úÿÿÿÿ8æó˜àÂ2J$09f7d2ba-cb28-4cf8-9453-6673bd66b51f
+
+java:S2184e"FCast one of the operands of this multiplication operation to a "long".(›Î®‡úÿÿÿÿ8ÏÕÍÃ2J$b761d034-5133-407d-bc66-a85b99dba801
+
+java:S2184™"FCast one of the operands of this multiplication operation to a "long".(›Î®‡úÿÿÿÿ8ÏÕÍÃ2J$a8c214e5-1230-4030-bbbe-c153561ea458
+
+java:S2184¬"FCast one of the operands of this multiplication operation to a "long".(Ãó¦òıÿÿÿÿ8ÏÕÍÃ2J$fd02a195-e89e-4ce9-89c9-e81d4a3da58b
+•	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(Ğ˜ÎJ$ed881b8a-64a6-4606-8b8c-759b2ee88a7a
+
+java:S2589”"8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ8ÛŒ×Ã2J$260820a9-7564-40ab-95a1-ede1a1c6cdb9
+€
+java:S25897"8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ8æÕÍÃ2J$c921363c-c21a-42b9-b738-b4e53db8b47a
+€
+java:S2589\"8Remove this expression which always evaluates to "false"(ÿ€Êúÿÿÿÿ8æÕÍÃ2J$59aefe40-0177-49ce-9435-271493de8c88
+…
+java:S6813"BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$710e0a31-bb0e-42d3-895e-9b71759e07e2
+…
+java:S6813""BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$71518390-4230-4ab9-ae03-24ba37f9c79e
+…
+java:S6813%"BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$fa044395-4dda-4cc0-9fb8-ce689a7c1b04
+…
+java:S6813("BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$2668e9fe-f2ea-44c1-9bc5-594b5867855a
+…
+java:S6813,"BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$1f5475e9-4f5a-4889-a5a7-a36558c82c82
+…
+java:S6813/"BRemove this field injection and use constructor injection instead.(êæÄŞ8çÕÍÃ2J$6943c76f-edbe-4ff4-9a1b-713024f5cffc
+/
+java:S2176"Rename this class.(Ì°Ö8¤¥ÜÃ2
+w	java:S125="<This block of commented-out lines of code should be removed.(Î½şÁJ$86c94805-f64c-43b3-a664-06af2d8d694a
+v	java:S125@"<This block of commented-out lines of code should be removed.(·¦UJ$dbec42de-d16f-495a-9315-84b71e085946
+›
+java:S2139R"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8ìÕÍÃ2J$fc12077b-9756-4e89-a9c1-a0b18c1847f7
+›
+java:S2139i"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8îÕÍÃ2J$25495b3f-871c-486f-9e6b-190ab1bffee6
+œ
+java:S2139£"XEither log this exception and handle it, or rethrow it with some contextual information.(”ı¾8òÕÍÃ2J$f21ef7cb-9027-464c-a93a-06ccfb165bed
+x
+java:S3457¥"4Lambda should be used to defer string concatenation.(¼Õ†8óÕÍÃ2J$e0583c34-2561-4278-9277-0af8d185a3bd
+U
+java:S1128"3Remove this unused import 'com.influencer.service'.(€Ùö‚ùÿÿÿÿ8±¥ÜÃ2
