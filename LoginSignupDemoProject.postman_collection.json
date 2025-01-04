@@ -1,9 +1,9 @@
 {
 	"info": {
-		"_postman_id": "1cd30e52-2b02-4f79-b632-d915bb80ed06",
+		"_postman_id": "8ca85d74-7f9b-40a7-9a5d-8d7a7fbc2e08",
 		"name": "LoginSignupDemoProject",
 		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
-		"_exporter_id": "21701678"
+		"_exporter_id": "26860496"
 	},
 	"item": [
 		{
@@ -268,6 +268,39 @@
 					"port": "8081",
 					"path": [
 						"reset-forget-pwd"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Change-password",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "eyJhbGciOiJIUzI1NiJ9.eyJpc3MiOiJJbmZsdWVuY2VyIiwic3ViIjoiSldUIFRva2VuIiwidXNlcm5hbWUiOiJwaXl1c2hmcm9tbWFzYWlAZ21haWwuY29tIiwiYXV0aG9yaXRpZXMiOiJST0xFX0FETUlOLFJPTEVfVVNFUiIsImlhdCI6MTczNTk3ODYwNCwiZXhwIjoxNzM2MDY1MDA0fQ.YXX_SgDuZt5d8OeeukqQFSl5cQq4vWI65XxS6mnhQz0",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \r\n    \"oldPassword\": \"Piyush@123\",\r\n    \"newPassword\": \"Piyush@1233\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:8081/update-password",
+					"host": [
+						"localhost"
+					],
+					"port": "8081",
+					"path": [
+						"update-password"
 					]
 				}
 			},
