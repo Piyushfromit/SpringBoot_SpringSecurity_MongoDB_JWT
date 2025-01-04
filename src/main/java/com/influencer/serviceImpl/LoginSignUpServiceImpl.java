@@ -25,7 +25,6 @@ import static org.springframework.data.mongodb.core.FindAndModifyOptions.options
 
 import java.time.Instant;
 import java.time.LocalDateTime;
-import java.util.Date;
 import java.util.Optional;
 import java.util.logging.Level;
 import java.util.logging.Logger;
@@ -45,7 +44,6 @@ public class LoginSignUpServiceImpl implements LoginSignUpService {
 
     @Autowired
     private  AuthorityRepository authorityRepository;
-
 
     @Autowired
     private RegistrationOtpRepository registrationOtpRepository;
@@ -67,8 +65,8 @@ public class LoginSignUpServiceImpl implements LoginSignUpService {
             //influencer.setPwd(latestRegistrationOtp.getPwd());
             String hashPwd = passwordEncoder.encode(latestRegistrationOtp.getPassword());
             influencer.setPassword(hashPwd);
-//            influencer.setStatus("ACTIVE");
-//            influencer.setRegisteredAt(LocalDateTime.now());
+            influencer.setStatus("INACTIVE");
+            influencer.setRegisteredAt(LocalDateTime.now());
             Influencer savedInfluencer = influencerRepository.save(influencer);
 
             String authorityCollectionName = Authority.class.getAnnotation(Document.class).collection();

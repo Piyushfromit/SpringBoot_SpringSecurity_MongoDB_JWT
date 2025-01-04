@@ -1,5 +1,5 @@
 
-t
-java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¬Îÿ„ùÿÿÿÿ8¿Œ¨âÂ2
+š
+java:S6204"RReplace this usage of 'Stream.collect(Collectors.toList())' with 'Stream.toList()'(¬Îÿ„ùÿÿÿÿ8¿Œ¨âÂ2J$f8ea730b-5313-4c61-ab10-86218badd68a
 “
-java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†8ýþ³Ö»2J$cba2a5c6-300c-4faf-97e2-be62b48e62d2
+java:S1128"PRemove this unused import 'org.springframework.web.bind.annotation.CrossOrigin'.(º´Ñ†8ýþ³Ö»2J$831db539-c248-43bd-85cd-50f67aa33d2a

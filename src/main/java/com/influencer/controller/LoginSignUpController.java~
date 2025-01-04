@@ -275,7 +275,7 @@ public class LoginSignUpController {
 
 
     @PostMapping("/update-password")
-    public ResponseEntity<ApiResponse> updatePassword(Authentication authentication, @RequestBody  ForgetPasswordRequestDTO forgetPasswordRequest) {
+    public ResponseEntity<ApiResponse> updatePassword(Authentication authentication, @RequestBody  ChangePasswordRequestDTO forgetPasswordRequest) {
         String userEmail = authentication.getName();
         ResponseEntity<ApiResponse> isPasswordChanged  = influencerService.changeInfluencerPassword(userEmail, forgetPasswordRequest.oldPassword(), forgetPasswordRequest.newPassword());
         return isPasswordChanged;

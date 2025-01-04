@@ -16,6 +16,7 @@ import org.springframework.data.mongodb.core.aggregation.AggregationResults;
 import org.springframework.data.mongodb.core.mapping.Document;
 import org.springframework.data.mongodb.core.query.Criteria;
 import org.springframework.data.mongodb.core.query.Query;
+import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -43,7 +44,6 @@ public class LoginSignUpServiceImpl implements LoginSignUpService {
 
     @Autowired
     private  AuthorityRepository authorityRepository;
-
 
     @Autowired
     private RegistrationOtpRepository registrationOtpRepository;
@@ -192,9 +192,31 @@ public class LoginSignUpServiceImpl implements LoginSignUpService {
         return false;
     }
 
+
     @Override
     public ResponseEntity<ApiResponse> changeInfluencerPassword(String email, String oldPassword, String newPassword) {
-        return null;
+        Optional<Influencer> existingInfluencer = influencerRepository.findByEmail(email);
+        if (existingInfluencer.isPresent()) {
+            Influencer existingInfluencerDetails = existingInfluencer.get();
+            // Verify the old password
+            if (passwordEncoder.matches(oldPassword, existingInfluencerDetails.getPassword()) && !oldPassword.equals(newPassword)) {
+                // Encode and set the new password
+                existingInfluencerDetails.setPassword(passwordEncoder.encode(newPassword));
+                influencerRepository.save(existingInfluencerDetails);
+                ApiResponse response = new ApiResponse( LocalDateTime.now(), HttpStatus.OK.value(), "Password changed successfully.", null);
+                return ResponseEntity.ok(response);
+            }else if (passwordEncoder.matches(oldPassword, existingInfluencerDetails.getPassword())  && oldPassword.equals(newPassword) ){
+                ApiResponse response = new ApiResponse(LocalDateTime.now(), HttpStatus.BAD_REQUEST.value(), "Please Enter Different Password", null);
+                return ResponseEntity.badRequest().body(response);
+            }
+        }
+        ApiResponse response = new ApiResponse(LocalDateTime.now(), HttpStatus.BAD_REQUEST.value(), "Invalid Current Password", null);
+        return ResponseEntity.badRequest().body(response);
+
     }
+
+
+
+
 
 }

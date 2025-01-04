@@ -1,13 +1,17 @@
 
 £
-java:S1192£"ZDefine a constant instead of duplicating this literal "User not Registered with " 3 times.(àš„Áüÿÿÿÿ8¥€å€Ã2J$67b5bbb4-7f8e-4f90-9ca5-a2f0dbbe0416
+java:S1192¡"ZDefine a constant instead of duplicating this literal "User not Registered with " 3 times.(àš„Áüÿÿÿÿ8¥€å€Ã2J$327688a4-02e6-4e60-ba70-387ee3f57bb9
 ³
-java:S1192k"kDefine a constant instead of duplicating this literal "OTP has expired. Please request a new one." 3 times.(Û–ÊÔøÿÿÿÿ8õîáÂ2J$1787dd50-571d-41b2-bd3b-a8805c212697
+java:S1192i"kDefine a constant instead of duplicating this literal "OTP has expired. Please request a new one." 3 times.(Û–ÊÔøÿÿÿÿ8õîáÂ2J$9846f235-46d4-40f8-84f7-cfab3b78799a
 x
-java:S1066‰"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8‘š¦áÂ2J$09c10126-cd50-471e-b13c-6eaa7b54f118
+java:S1066‡"/Merge this if statement with the enclosing one.(¯¦”Úùÿÿÿÿ8‘š¦áÂ2J$5c970e31-095d-485c-b526-ff1dd2e96305
 }
-java:S1141@"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8‘š¦áÂ2J$faec16f0-d844-4b5d-b294-e9a74726efe1
-²
-java:S1488˜"iImmediately return this expression instead of assigning it to the temporary variable "isPasswordChanged".(ŞøÍõşÿÿÿÿ8Ïæ‚Ã2J$173470f2-e01a-4e57-8fc6-1e98d2a5703d
-ƒ	java:S125Z"<This block of commented-out lines of code should be removed.(İ¹›Èøÿÿÿÿ8¯š¦áÂ2J$ba4e0e3b-4ed6-4c76-8f06-ed4fcb39f2c1
-„	java:S125©"<This block of commented-out lines of code should be removed.(ìüúÿÿÿÿ8¸š¦áÂ2J$ad771852-b7d5-4725-9a05-cec0740a3b25
+java:S1141>"5Extract this nested try block into a separate method.(¡»¢üùÿÿÿÿ8‘š¦áÂ2J$23263b12-1f21-4f1a-8882-b46b03acb192
+¬
+java:S1488–"iImmediately return this expression instead of assigning it to the temporary variable "isPasswordChanged".(º™Ø|8Ïæ‚Ã2J$e8920a55-5ef4-4297-aca3-8f2cc4068a48
+ƒ	java:S125X"<This block of commented-out lines of code should be removed.(§§äˆøÿÿÿÿ8¯š¦áÂ2J$474a9c9e-038e-46f6-8374-6a25299bcb9c
+„	java:S125§"<This block of commented-out lines of code should be removed.(ìüúÿÿÿÿ8¸š¦áÂ2J$5b2848a7-7db0-4e9d-bd5c-a505ab41f970
+
+java:S1128"JRemove this unused import 'com.influencer.repository.AuthorityRepository'.(º•Ô8µî¨ƒÃ2J$2f888184-6ffa-4c53-aec4-02949ede1b2d
+¡
+java:S1128"YRemove this unused import 'org.springframework.security.crypto.password.PasswordEncoder'.(‰¡ßáÿÿÿÿÿ8µî¨ƒÃ2J$d0615608-3f6d-47f3-b8b8-dd32dada68d9

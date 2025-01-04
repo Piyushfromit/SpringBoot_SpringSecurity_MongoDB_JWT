@@ -105,3 +105,9 @@ p
 @src/main/java/com/influencer/model/ForgetPasswordRequestDTO.java,d\8\d887f6ee4bf7448627bee7c6c4fd33e87c5544a9
 p
 @src/main/java/com/influencer/model/ChangePasswordRequestDTO.java,e\2\e2a6e202325b1774b7c6aa942933e3849bf809ed
+c
+3src/main/java/com/influencer/entity/Influencer.java,5\d\5de5ffbd1027db5d99ccf95ff29991201b51a6c1
+b
+2src/main/java/com/influencer/entity/Authority.java,f\2\f27c6cd5b61088836b8e0472fd864ce3aef2f620
+h
+8src/main/java/com/influencer/entity/RegistrationOtp.java,8\2\82380338db65e5398968703d17f4ffc40dfe025b

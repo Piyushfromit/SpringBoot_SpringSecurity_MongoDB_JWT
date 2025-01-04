@@ -1,15 +1,15 @@
 
 ò
-java:S1488H"\Immediately return this expression instead of assigning it to the temporary variable "code".(ä»íòJ$30bfd622-8b69-4660-80ce-6eca7c34f616
-ï	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–òéŒJ$cd3779bb-1c63-46ce-b33a-5262f218a8ef
+java:S1488H"\Immediately return this expression instead of assigning it to the temporary variable "code".(ä»íòJ$62a2c7e6-b15b-4981-ba5e-6109af3d2112
+ï	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(–òéŒJ$4857f308-2470-4a54-81cb-c116cab167e2
 ~
-java:S6813"BRemove this field injection and use constructor injection instead.(ÍÊƒﬁJ$cb4a05a2-0dbc-4ed7-8f9f-2f543874b056
+java:S6813"BRemove this field injection and use constructor injection instead.(ÍÊƒﬁJ$9dd6862f-f419-4716-a7cb-092c3a4a2e40
 õ
-java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(·£Ô J$c60ca8a9-3646-48c1-b03a-e6c687d31ca0
+java:S1149"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(·£Ô J$2d6d5657-ab6d-457d-9ac7-4ed148bccee5
 ¢
-java:S11490"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(·£Ô 8Ä∂ç‡¬2J$8105404e-3b0d-48a9-86dc-0a08e66612c1
-w	java:S125"<This block of commented-out lines of code should be removed.(ÀõıÑJ$3f07793d-12d5-411f-aa08-666548c16b9d
-~	java:S125-"<This block of commented-out lines of code should be removed.(ÀõıÑ8É∂ç‡¬2J$75fc8b22-dc39-4e3f-8e41-562b36b460bd
+java:S11490"_Replace the synchronized class "StringBuffer" by an unsynchronized one such as "StringBuilder".(·£Ô 8Ä∂ç‡¬2J$888ed7c5-4586-401b-a75f-2c9de9147ce0
+w	java:S125"<This block of commented-out lines of code should be removed.(ÀõıÑJ$5f5727e4-1eb8-4855-96a5-e967460e566b
+~	java:S125-"<This block of commented-out lines of code should be removed.(ÀõıÑ8É∂ç‡¬2J$2dddbb93-cf4d-4902-b754-140358ea17ec
 _
-java:S2119A"Save and re-use this "Random".(öü´Ì¯ˇˇˇˇJ$b01f8c7b-5d77-4ecc-a4fe-982dfbf3ad60
-|	java:S125O"<This block of commented-out lines of code should be removed.(’õëÄ˙ˇˇˇˇJ$a2319d40-c8c1-450b-9d6a-78c49340c0e5
+java:S2119A"Save and re-use this "Random".(öü´Ì¯ˇˇˇˇJ$ebee96a6-10d4-41f5-a4b9-b869349ec6ca
+]	java:S125O"<This block of commented-out lines of code should be removed.(’õëÄ˙ˇˇˇˇ8¬ÓƒÉ√2
