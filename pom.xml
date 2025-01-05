@@ -8,11 +8,12 @@
 		<version>3.3.2</version>
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
-	<groupId>com.influencer</groupId>
-	<artifactId>influencer_api2</artifactId>
+	<groupId>com.fit</groupId>
+	<artifactId>fit-api</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>influencer_api2</name>
-	<description>Demo project for Spring Boot and spring security</description>
+	<packaging>war</packaging>
+	<name>fit-api</name>
+	<description>fit-api project</description>
 	<url/>
 	<licenses>
 		<license/>
@@ -113,6 +114,7 @@
 	</dependencies>
 
 	<build>
+		<finalName>fit-api</finalName>
 		<plugins>
 			<plugin>
 				<groupId>org.springframework.boot</groupId>
