@@ -15,7 +15,7 @@ import java.time.LocalDateTime;
 public class ForgetPasswordOtp {
 
     @Id
-    private int id;
+    private Long id;
     private String email; // Email of the user requesting password reset
     private String resetToken; // Unique reset token
     private String otp; // OTP sent to the user

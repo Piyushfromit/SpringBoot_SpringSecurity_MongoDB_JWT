@@ -161,7 +161,7 @@ public class LoginSignUpController {
             }
             User customer = optionalCustomer.get();
             String otp = emailService.generateCode();
-            emailService.sendForgetPasswordOtpOnMailUsingSMTP(customer.getName(), userEmail, otp);
+            emailService.sendForgetPasswordOtpOnMailUsingSMTP("User", userEmail, otp);
             //emailService.sendForgetPasswordOtpOnMailUsingSES_AWS(customer.getName(), userEmail, otp);
             userService.saveForgetPasswordOtp(userEmail, otp);
 

@@ -2,10 +2,7 @@ package com.fit.entity;
 
 import com.fasterxml.jackson.annotation.JsonProperty;
 
-import jakarta.validation.constraints.Email;
-import jakarta.validation.constraints.NotBlank;
-import jakarta.validation.constraints.Pattern;
-import jakarta.validation.constraints.Size;
+
 import lombok.*;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.DBRef;
@@ -13,6 +10,7 @@ import org.springframework.data.mongodb.core.mapping.Document;
 
 import java.time.LocalDateTime;
 import java.util.HashSet;
+import java.util.List;
 import java.util.Set;
 
 @Getter
@@ -23,29 +21,20 @@ import java.util.Set;
 public class User {
 
     @Id
-    private int id;
-
-    @NotBlank(message = "Name is required")
-    private String name;
-
-    @Email(message = "Invalid email address")
-    @NotBlank(message = "Email is required")
+    private Long id;
     private String email;
-
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
-    @Pattern(regexp = "^(?=.*[a-z])(?=.*[A-Z])(?=.*\\d)(?=.*[@$!%*?&])[A-Za-z\\d@$!%*?&]{8,128}$", message = "Password must be strong")
-    @Size(min = 8, max = 128, message = "Password must be between 8 and 128 characters")
-    @NotBlank(message = "Password is required")
     private String password;
-    private String contact;
+    private String phone;
+
     private String status; // ACTIVE, INACTIVE, BANNED
-    private LocalDateTime registeredAt;
-
-
+    private LocalDateTime registrationDate; // When the user was registered
+    private LocalDateTime lastLoginDate;    // Last login timestamp
 
     @DBRef(lazy = true) // Use lazy loading for better performance
     @JsonProperty(access = JsonProperty.Access.WRITE_ONLY)
     private Set<Authority> authorities = new HashSet<>(); // Initialize to avoid null references
+
 
 
 }

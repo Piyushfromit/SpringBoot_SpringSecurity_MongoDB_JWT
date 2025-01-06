@@ -17,7 +17,7 @@ import java.time.LocalDateTime;
 public class RegistrationOtp {
 
     @Id
-    private int id;
+    private Long id;
     private String email;
     private String password;
     private String otp;

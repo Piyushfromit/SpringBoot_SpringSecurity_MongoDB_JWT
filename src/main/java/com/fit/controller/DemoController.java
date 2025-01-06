@@ -13,14 +13,12 @@ import java.util.stream.Collectors;
 @RestController
 public class DemoController {
 
-
         @GetMapping("/")
         public ResponseEntity<String> welcomeMessage() {
 
             return ResponseEntity.ok("Welcome to Demo Login Signup API project!");
 
         }
-
 
         @GetMapping("/authenticated")
         public String checkAuthenticated(Authentication authentication) {

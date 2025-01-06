@@ -14,6 +14,6 @@ public class DatabaseSequence {
 
     @Id
     private String id;
+    private int seq;
 
-    private long seq; // Changed from int to long to support larger sequences
 }
